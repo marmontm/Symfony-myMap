@@ -1,0 +1,215 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+* {
+    /* Set default font */
+    font-family: "SF-Pro-Display-Regular", Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    /* Avoid Left/Right scrolling */
+    overflow-x: hidden;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #0d86ff;
+
+    /* Remove underline style */
+    text-decoration: none;
+}
+
+button {
+    /* Box */
+    background-color: #1f68dd;
+    margin: 10px 10px; /* vert, horiz */
+    padding: 8px 16px;
+    border-radius: 7px;
+    border: transparent !important;
+
+    /* Highlight (only on Apple mobile devices) */
+    -webkit-tap-highlight-color: rgba(66, 134, 244, 0.4);
+
+    /* Text */
+    color: #ffffff;
+    font-size: 14pt;
+
+    /* Put same cursor as link */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #77abff;
+}
+
+select {
+    /* Remove default style */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+
+    /* Box */
+    background-color: #1f68dd;
+    margin: 10px 10px; /* vert, horiz */
+    padding: 8px 16px;
+    border-radius: 7px;
+    border: transparent !important;
+
+    /* Highlight (only on Apple mobile devices) */
+    -webkit-tap-highlight-color: rgba(66, 134, 244, 0.4);
+
+    /* Text */
+    color: #ffffff;
+    font-size: 14pt;
+
+    /* Put same cursor as link */
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: #77abff;
+}
+
+input[type=text] {
+    /* Remove default style */
+    -webkit-appearance: none !important;
+       -moz-appearance: none !important;
+
+    /* Box */
+    margin: 10px 10px; /* vert, horiz */
+    padding: 8px 4pt;
+    background: transparent;
+    width: 280px;
+
+    /* Border */
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+    border-bottom: 2px solid #1f68dd !important;
+    border-radius: 0 !important;
+
+    /* Text */
+    color: #000000;
+    font-size: 14pt;
+}
+
+input[type=text]:hover,
+input[type=text]:focus {
+    border-bottom: 2px solid #77abff !important;
+}
+
+input[type=text]::placeholder {
+    /* Text */
+    color: #777777;
+}
+
+.app {
+    display: flex;
+    flex-flow: column;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    /* Box */
+    margin-top: 8pt;
+    margin-bottom: 8pt;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    /* Text */
+    font-size: 12pt;
+    color: #777777;
+}
+
+h2 {
+    /* Box */
+    margin-bottom: 4pt;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    /* Text */
+    font-size: 18pt;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.section-title {
+    /* Box */
+    display: block;
+    margin: 8pt 0;
+    padding: 8pt 10px;
+    background-color: #eaeaea;
+
+    /* Text */
+    font-weight: bold;
+}
+
+.info {
+    margin-bottom: 8pt;
+}
+
+.info td {
+    padding: 2pt 4pt;
+}
+
+.info-var {
+    color: #1f68dd;
+}
+
+.info-warn {
+    color: #cb4141;
+}
+
+#map {
+    display: block;
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+}
+
+
+
+/*
+ * Test
+ */
+
+
+/*!* Always set the map height explicitly to define the size of the div*/
+ /** element that contains the map. *!*/
+/*#map {*/
+    /*height: 100%;*/
+/*}*/
+/*!* Optional: Makes the sample page fill the window. *!*/
+/*html, body {*/
+    /*height: 100%;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/

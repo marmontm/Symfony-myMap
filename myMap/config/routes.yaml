@@ -1,0 +1,9 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_mymap:
+  path: /mymap
+  controller: App\Controller\mapController::init
+  requirements:
+          _method:  GET

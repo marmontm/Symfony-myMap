@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}myMap/Symfony - maxmrmt{% endblock %}</title>
+
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/reset.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/index.css') }}">
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block body %}
+            <div class="app">
+                <h1>myMap</h1>
+
+                <!--User input-->
+                <h2>Enter location:</h2>
+
+                <div class="form">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    {{ form_end(form) }}
+                </div>
+
+                <!--Map service response-->
+                <p class="section-title">Information about this location</p>
+                <table class="info">
+                    <tr>
+                        <td>Result: </td>
+                        <td class="info-var" id="info-res">{{ location }}</td>
+                    </tr>
+                    <tr>
+                        <td>Latitude: </td>
+                        <td class="info-var" id="info-lat">{{ lat }}</td>
+                    </tr>
+                    <tr>
+                        <td>Longitude: </td>
+                        <td class="info-var" id="info-lng">{{ lng }}</td>
+                    </tr>
+                </table>
+                <div id="map"></div>
+            </div>
+        {% endblock %}
+
+        {% block javascripts %}
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbl3f-Hhfu0-IgScw1Jhe3NuWA1VFvJdQ&language=en"></script>
+        {% endblock %}
+    </body>
+</html>
